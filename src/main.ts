@@ -1,8 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
-import store from "./store";
+import { createApp } from 'vue'
+import App from './App.vue'
+import './registerServiceWorker'
 
-createApp(App)
-  .use(store)
-  .mount("#app");
+const init = async () => {
+    // @ts-ignore
+    createApp(App).mount('#app')
+}
+
+init().then(() => console.log('App initialized 🚀'))
